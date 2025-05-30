@@ -1,6 +1,6 @@
 # 🧠 AI Job Matching System - TK Company
 
-A professional web-based system that allows HR recruiters to upload candidate resumes in PDF or TXT format, compare them to a job description using AI (BERT embeddings), and retrieve a ranked list of the best matches.
+A professional AI-powered web application that enables HR recruiters to upload candidate resumes in PDF or TXT format, automatically analyze and compare them with a given job description using BERT-based embeddings, and return a ranked list of the most relevant candidates.
 
 ---
 <img src="https://github.com/user-attachments/assets/238427f4-e49b-49fd-9ab1-ad0f2355b14f" width="400" hight ="400"></br>
