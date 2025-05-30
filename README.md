@@ -49,6 +49,8 @@ aiforcv/
 └── templates/               # Flask HTML templates
     └── index.html           # Main UI for the app
     
-<img src="![image](https://github.com/user-attachments/assets/238427f4-e49b-49fd-9ab1-ad0f2355b14f)" width="200" hight ="200">
+<img src="https://github.com/user-attachments/assets/238427f4-e49b-49fd-9ab1-ad0f2355b14f" width="200" hight ="200">
+<img src="https://github.com/user-attachments/assets/e584ea1c-f998-457a-b16d-c136ed9b72bb" width="200" hight ="200">
+
 
  
