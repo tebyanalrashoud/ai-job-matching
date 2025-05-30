@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TK Company - AI Job Matcher</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #0a2342, #5edfff);
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(10, 35, 66, 0.9);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #5edfff;
+            letter-spacing: 1px;
+        }
+
+        main {
+            max-width: 700px;
+            margin: 40px auto;
+            background-color: rgba(18, 44, 83, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        textarea, input[type="file"], button {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #5edfff;
+            color: #0a2342;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3ac8ff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #5edfff;
+        }
+
+        th {
+            background-color: #1a355a;
+             color: white; 
+        }
+
+        tr:nth-child(1) {
+            background-color: #a1f0c4; /*the high match */
+            color: #000;
+        }
+
+        tr:not(:first-child) {
+            background-color: #15365c;
+        }
+
+        a {
+            color: #5edfff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: rgba(10, 35, 66, 0.95);
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            color: #ccc;
+            font-size: 13px;
+            bottom: 0%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TK Company</h1>
+    </header>
+
+    <main>
+        <form method="POST" enctype="multipart/form-data">
+            <label>Enter Job Description:</label>
+            <textarea name="job_description" rows="5" placeholder="Type job description here..." required></textarea>
+
+            <label>Upload Resumes (.pdf / .txt):</label>
+            <input type="file" name="resumes" multiple required>
+
+            <button type="submit">Match Resumes</button>
+        </form>
+
+        {% if results %}
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Category</th>
+                    <th>Score</th>
+                    <th>Download CV</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in results %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ row.Category }}</td>
+                    <td>{{ row.MatchingScore | round(2) }}</td>
+                    <td><a href="{{ url_for('download_file', filename=row.Filename) }}" download>Download</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </main>
+
+    <footer>
+        &copy; 2025 TK Company. All Rights Reserved.
+    </footer>
+</body>
+</html>
+
+
+
+
+
+

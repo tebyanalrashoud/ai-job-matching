@@ -1,0 +1,4 @@
+Flask==3.1.0
+pandas==1.5.3
+PyMuPDF==1.21.1
+werkzeug==3.1.3
