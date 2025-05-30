@@ -3,7 +3,8 @@
 A professional web-based system that allows HR recruiters to upload candidate resumes in PDF or TXT format, compare them to a job description using AI (BERT embeddings), and retrieve a ranked list of the best matches.
 
 ---
-![image](https://github.com/user-attachments/assets/92037afe-d93c-4441-a2b9-026c1d5be55b)
+<img src="https://github.com/user-attachments/assets/238427f4-e49b-49fd-9ab1-ad0f2355b14f" width="400" hight ="400"></br>
+<img src="https://github.com/user-attachments/assets/e584ea1c-f998-457a-b16d-c136ed9b72bb" width="400" hight ="400">
 
 ## 🚀 Project Overview
 
@@ -49,8 +50,7 @@ aiforcv/
 └── templates/               # Flask HTML templates
     └── index.html           # Main UI for the app
     
-<img src="https://github.com/user-attachments/assets/238427f4-e49b-49fd-9ab1-ad0f2355b14f" width="200" hight ="200">
-<img src="https://github.com/user-attachments/assets/e584ea1c-f998-457a-b16d-c136ed9b72bb" width="200" hight ="200">
+
 
 
  
